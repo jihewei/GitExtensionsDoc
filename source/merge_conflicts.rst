@@ -5,15 +5,14 @@
 
 .. image:: /images/merge_conflicts.png
 
-Handle merge conflicts
+处理冲突Handle merge conflicts
 ----------------------
 
-To solve merge conflicts just click on a warning or open the merge conflict dialog from the menu. A dialog will prompt 
-showing all conflicts. You can solve a conflict by double-click on a filename.
+当点击冲突警告时，处理冲突窗口就是冒出来。当然你也可以从菜单调出处理冲突窗口。接下来就可以双击一个文件开始解决了。
 
 .. image:: /images/resolve_merge_conflicts.png
 
-There are three kinds of conflicts:
+冲突有三类：
 
 +---------------------------------------+-------------------------------+
 |File deleted and changed               | Use modified or deleted file? |
@@ -24,12 +23,10 @@ There are three kinds of conflicts:
 +---------------------------------------+-------------------------------+
 
 
-If the file is deleted in one commit and changed in another commit, a dialog will ask to keep the modified file or delete 
-the file. When there is a conflicting change the merge tool will be started. You can configure the tool you want to use for 
-merge conflicts. The image below shows Perforce P4Merge a free to use merge tool. Git Extensions is packaged with KDiff3, an 
-open source merge tool.
+如果文件在一个提交中标记为删除，另外一个提交而是修改，窗口就是提示保留修改还是删除，也就解决了。而对于本地与远程同时修改的情况，
+冲突合并工具就会被自动打开。其中合并工具可以配置，下面的图片是P4Merge。Git Extensions的安装包打包的是KDiff3。
 
-In the merge tool you will see four versions of the same file:
+在合并工具中，冲突文件会有4个版本在不同的区域展示：
 
 +--------+----------------------------------------------------------------+
 |Base    | The latest version of the file that exist in both repositories |
