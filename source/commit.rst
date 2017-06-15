@@ -1,45 +1,42 @@
-Commit
+提交
 ======
 
-A commit is a set of changes with some extra information. Every commit contains the following information:
+提交Commit是一些修改，以及必要的额外信息。每个提交包含如下信息：
 
-* Changes
-* Committer name and email
-* Commit date
-* Commit message
-* Cryptographically strong SHA1 hash
+* 具体修改
+* 提交修改姓名和邮箱
+* 提交日期
+* 提交注释
+* SHA1散列码
 
 Each commit creates a new revision of the source. Revisions are not tracked per file; each change creates a new 
 revision of the complete source. Unlike most traditional source control management systems, revisions are not named 
 using a revision number. Each revision is named using a SHA1, a 41 long characters cryptographically strong hash. 
 
-Commit changes
+提交修改
 --------------
 
-Changes can be committed to the local repository. Unlike most other source control management systems you do not need to 
-checkout files before you start editing. You can just start editing files, and review all the changes you made in the commit 
-dialog later. When you open the commit dialog, all changes are listed in the top-left. 
+修改可以先提交到本地库，不像其他源代码管理工具编辑前都要先签出。
+你可以直接修改文件，然后在提交窗口中查看所有的修改明细。这些修改显示
+在左上角区域。 
 
 .. image:: /images/commit_dialog.png
 
-There are three kinds of changes:
+修改可以划分为三类：
 
 +----------+----------------------------------------------------------------------------------------------------------------+
-|Untracked | This file is not yet tracked by Git. This is probably a new file, or a file that has not been committed to Git |
-|          | before.                                                                                                        |
+|Untracked | 文件从未被提交到Git库中 |
 +----------+----------------------------------------------------------------------------------------------------------------+
-|Modified  | This file is modified since the last commit.                                                                   |
+|Modified  | 文件被修改，与Git库相比发生改变 |
 +----------+----------------------------------------------------------------------------------------------------------------+
-|Deleted   | This file has been deleted.                                                                                    |
+|Deleted   | 文件被删除了 |
 +----------+----------------------------------------------------------------------------------------------------------------+
 
 When you rename or move a file Git will notice that this file has been moved, but currently Git Extensions does not show 
 this in the commit dialog. 
 
-During your initial commit there are probably lots of files you do not want to be tracked. You can ignore these files by not 
-staging them, but they will show every time. You can instead add them to the ``.gitignore`` file of your repository. Files that are 
-in the ``.gitignore`` file will not show up in the commit dialog again. You can open the ``.gitignore`` editor from the menu 
-``Working dir changes`` by selecting ``Edit ignored files``.
+在初次提交等时，有大量文件是你不希望提交到Git中，这里文件可能是本地配置或临时文件等。虽然可以暂存staging，
+但再次会继续冒出来。这个时候，可以通过配置.gitignore来永久忽略它们。具体.gitignore的配置见下图。
 
 .. image:: /images/commit_menu_edit_ignored.png
 
