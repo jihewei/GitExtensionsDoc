@@ -1,8 +1,7 @@
-Merge Conflicts
+合并冲突Merge Conflicts
 ===============
 
-When merging branches or commits you can get merge conflicts. Git will try to resolve these, but some conflicts 
-need to be resolved manually. Git Extensions will show warnings when there is a merge conflict.
+当进行分支合并或者提交更新时，伴有冲突发生。Git会尝试自动解决，对于解决不了的则需要人工干预。这个时候Git Extensions会显示冲突警告。
 
 .. image:: /images/merge_conflicts.png
 
